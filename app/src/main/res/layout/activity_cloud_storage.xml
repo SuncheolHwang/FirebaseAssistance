@@ -1,51 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".cloudstorage.CloudStorageActivity">
 
     <Button
-        android:id="@+id/firebaseauthbtn"
+        android:id="@+id/uploadBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Firebase Authentication"
-        app:layout_constraintBottom_toTopOf="@+id/firebaseRealTimeDbBtn"
+        android:text="파일 업로드"
+        app:layout_constraintBottom_toTopOf="@+id/downloadBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/firebaseRealTimeDbBtn"
+        android:id="@+id/downloadBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Firebase Real Time DB"
+        android:text="파일 다운로드"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firebaseauthbtn"
-        app:layout_constraintBottom_toTopOf="@+id/firebaseCloudFireStoreBtn"/>
+        app:layout_constraintTop_toBottomOf="@+id/uploadBtn"
+        app:layout_constraintBottom_toTopOf="@+id/metaInfoBtn"/>
 
     <Button
-        android:id="@+id/firebaseCloudFireStoreBtn"
+        android:id="@+id/metaInfoBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Firebase Cloud Firestore"
+        android:text="메타 데이터 사용하기"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/firebaseCloudStorageBtn"
-        app:layout_constraintTop_toBottomOf="@+id/firebaseRealTimeDbBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/downloadBtn"
+        app:layout_constraintBottom_toTopOf="@+id/deleteBtn"/>
 
     <Button
-        android:id="@+id/firebaseCloudStorageBtn"
+        android:id="@+id/deleteBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Firebase Cloud Storage"
+        android:text="파일 삭제"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firebaseCloudFireStoreBtn" />
-
+        app:layout_constraintTop_toBottomOf="@+id/metaInfoBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
